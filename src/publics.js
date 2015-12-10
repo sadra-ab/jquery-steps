@@ -113,6 +113,18 @@ $.fn.steps.insert = function (index, step)
 };
 
 /**
+ * Routes to the step indicated.
+ *
+ * @method goto
+ * @return {Boolean} Indicates whether the action executed
+ **/
+$.fn.steps.goto = function (index)
+{
+	return goToStep(this, getOptions(this), getState(this), index);
+};
+
+
+/**
  * Routes to the next step.
  *
  * @method next
